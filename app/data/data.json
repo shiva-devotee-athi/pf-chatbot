@@ -1,0 +1,119 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hello", "Hi", "Hey", "Good morning"],
+      "responses": ["Hello! How can I help you?", "Hi there!"],
+      "context": "General greeting"
+    },
+    {
+      "tag": "about_me",
+      "patterns": ["Tell me about yourself", "Who are you?", "What do you do?"],
+      "responses": [
+        "I'm a software engineer with 5 years of experience in web development, specializing in React and Python."
+      ],
+      "context": "Information about your professional background."
+    },
+    {
+      "tag": "education_qualifications",
+      "patterns": [
+        "What is your highest level of education",
+        "What was your major area of study?",
+        "Can you describe a relevant course or project you completed during your studies?",
+        "What programming languages did you learn in school",
+        "Do you have any relevant IT certifications",
+        "Where did you complete your school education, and how has it shaped your interest in IT?",
+        "Which university or college did you attend for your undergraduate studies, and what was your major?",
+        "Can you describe any significant projects or research you worked on during your undergraduate studies?",
+        "Did you pursue any postgraduate education?",
+        "If so, what specialization did you choose and why?",
+        "What programming languages or technical skills did you learn during your education that you find most useful in the IT industry?",
+        "Did you participate in any internships or co-op programs during your studies?",
+        "If so, what did you learn from those experiences?",
+        "Were you involved in any extracurricular activities or clubs related to IT or technology during your academic years?",
+        "How do you stay updated with the latest trends and advancements in the IT field after completing your formal education?",
+        "Have you obtained any certifications relevant to the IT industry?",
+        "How have they contributed to your professional growth?",
+        "Can you provide an example of a challenging academic project you completed and how you overcame any obstacles during that time?"
+      ],
+      "responses": [
+        "Master of Science in Mathemtics with 4 standing arrears",
+        "Mathematics",
+        "",
+        "",
+        "",
+        "I completed my school education at XYZ High School. It was there that I first developed an interest in IT through a computer science class that introduced me to coding and problem-solving techniques.",
+        "I attended Kalasalingam college of arts and science, afflicated by Madurai Kamarajar University for my undergraduate studies, where I majored in Mathematics but i learn in C, C++ as Core Paper in 3rd and 4th Semester.",
+        "The comprehensive curriculum and campus interview process helped me build a strong foundation in various aspects of IT.",
+        "No, I started My IT  career after Post Graduation,  One significant project I worked on was designing a responsive web application by Using HTML, CSS, Javascript, Later I learn React JS, Redux and Various Technologies",
+        "Yes, I pursued a Master's degree in Data Science.",
+        "I chose this specialization because of my keen interest in data analysis and machine learning, which I believe are crucial areas in the IT industry today.",
+        "During my education, I learned several programming languages such as Java, Python, and SQL.",
+        "I found Python particularly useful for data analysis and machine learning projects, while SQL has been invaluable for database management.",
+        "I completed an internship at a tech startup where I worked on developing web applications.",
+        "This experience taught me practical skills in front-end and back-end development, as well as how to work in a fast-paced, dynamic environment.",
+        "Yes, I was an active member of the Computer Science Club, where we organized coding competitions and tech talks.",
+        "I also participated in hackathons, which provided me with opportunities to apply my skills in real-world scenarios and collaborate with peers.",
+        "I stay updated by following tech blogs, subscribing to industry newsletters, and participating in online courses and webinars.",
+        "Additionally, I am an active member of professional IT forums and communities where I can learn from and network with other professionals.",
+        "These certifications have enhanced my knowledge and skills in agile methodologies and cloud computing, respectively, making me more versatile and effective in my roles.",
+        "Can you provide an example of a challenging academic project you completed and how you overcame any obstacles during that time?",
+        "One challenging project was developing an AI-based chatbot for customer service.",
+        "The main obstacle was integrating natural language processing capabilities.",
+        "I overcame this by conducting thorough research, seeking guidance from professors, and collaborating with classmates to find innovative solutions."
+      ],
+      "context": "Information about your educational background."
+    },
+    {
+      "tag": "skills",
+      "patterns": [
+        "What technologies do you use?",
+        "Tell me about your skills"
+      ],
+      "responses": [
+        "I use React JS, Next JS, React Native, Electron , HTML, CSS, Javascript, TypeScript, Python, FastAPI. "
+      ],
+      "context": "List of your technical skills."
+    },
+    {
+      "tag": "projects",
+      "patterns": [
+        "Tell me about your projects",
+        "What have you built?",
+        "More project details"
+      ],
+      "responses": [
+        "I have built a chatbot, an admin dashboard, and job portal systems.",
+        "I've worked on a variety of projects, including candidate job portals, application tracking systems, chat applications, and human resource management systems. Type 'More project details' if you're interested in know more. ",
+        "Using the electron program, I store daily sourced resumes in the cloud and keep track of them when I need to source. Simple Ecommerce application do you want to know more reach me"
+      ],
+      "context": "List of your projects."
+    },
+    {
+      "tag": "project_chatbot",
+      "patterns": [
+        "Tell me more about the chatbot project",
+        "What did you do on the chatbot project?"
+      ],
+      "responses": [
+        "The chatbot project involved creating a conversational AI using Python and NLP techniques. It was designed to answer frequently asked questions and provide customer support."
+      ],
+      "context": "More detail about the chatbot project."
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact you?",
+        "What's your email?",
+        "What's your Mobile Number?",
+        "Where can I find you on LinkedIn?",
+        ""
+      ],
+      "responses": [
+        "My email is vijayathiraj99@email.com. You can find me on LinkedIn at linkedin.com/in/example.",
+        "My mobile number is 918870762077. Please reach me just between 10 a.m. and 8 p.m."
+      ],
+      "context": "Your contact information."
+    }
+  ]
+}
