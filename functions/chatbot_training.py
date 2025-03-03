@@ -8,6 +8,9 @@ from tensorflow.keras.layers import Dense, Dropout # type: ignore
 from tensorflow.keras.optimizers import Adam # type: ignore
 from sklearn.preprocessing import LabelEncoder
 
+
+nltk.download('punkt_tab')
+
 # Load Data
 with open("../data/data.json") as file:
     data = json.load(file)
