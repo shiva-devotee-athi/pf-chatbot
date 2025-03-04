@@ -9,7 +9,7 @@ from tensorflow.keras.optimizers import Adam # type: ignore
 from sklearn.preprocessing import LabelEncoder
 
 
-nltk.download('punkt_tab')
+# nltk.download('punkt_tab')
 
 # Load Data
 with open("../data/data.json") as file:
