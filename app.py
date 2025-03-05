@@ -10,6 +10,9 @@ from pydantic import BaseModel
 from datetime import datetime as dt
 from fastapi.middleware.cors import CORSMiddleware
 
+import streamlit as st
+import requests
+
 # Load Model and Data
 model = tf.keras.models.load_model("./functions/chatbot_model.h5")
 words = pickle.load(open("./functions/words.pkl", "rb"))
@@ -90,3 +93,11 @@ async def chat(request: ChatRequest):
             "status": "delivered"
         }
     }}
+
+
+st.title("Chatbot")
+user_input = st.text_input("Enter your message:")
+if st.button("Send"):
+    response = requests.post(
+        "https://vj-pf-chatbot.streamlit.app/chat/", json={"message": user_input})
+    st.write("Bot:", response.json()["data"]["bot"]["message"])
