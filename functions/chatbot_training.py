@@ -9,7 +9,8 @@ from tensorflow.keras.optimizers import Adam # type: ignore
 from sklearn.preprocessing import LabelEncoder
 
 
-# nltk.download('punkt_tab')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 # Load Data
 with open("../data/data.json") as file:
@@ -17,8 +18,7 @@ with open("../data/data.json") as file:
 
 # Initialize NLP tools
 lemmatizer = WordNetLemmatizer()
-nltk.download('punkt')
-nltk.download('wordnet')
+
 
 # Preprocess Data
 words = []
@@ -57,6 +57,9 @@ random.shuffle(training)
 train_x = np.array([i[0] for i in training])
 train_y = np.array([i[1] for i in training])
 
+
+
+
 # Build Neural Network Model
 model = Sequential([
     Dense(128, input_shape=(len(train_x[0]),), activation="relu"),
@@ -66,11 +69,18 @@ model = Sequential([
     Dense(len(classes), activation="softmax")
 ])
 
+
+
 model.compile(loss="categorical_crossentropy", optimizer=Adam(learning_rate=0.001), metrics=["accuracy"])
-model.fit(train_x, train_y, epochs=200, batch_size=5, verbose=1)
+model.fit(train_x, train_y, epochs=200, batch_size=5, validation_split=0.2,  verbose=1)
+
+history = model.fit(train_x, train_y, epochs=200, batch_size=5, validation_split=0.2, verbose=1)
+
+with open("training_history.json", "w") as f:
+    json.dump(history.history, f)
 
 # Save Model and Data
-model.save("chatbot_model.h5")
+model.save("chatbot_model.keras")
 import pickle
 pickle.dump(words, open("words.pkl", "wb"))
 pickle.dump(classes, open("classes.pkl", "wb"))
